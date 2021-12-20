@@ -1,0 +1,95 @@
+<h1 mat-dialog-title>Add New Worker</h1>
+<form #createForm="ngForm">
+  <div class="container-fluid" mat-dialog-content>
+    <div class="row">
+      <div class="col-6">
+        <mat-form-field class="w=200">
+          <input
+            type="text"
+            name="firstname"
+            [(ngModel)]="newWorkerModel.firstname"
+            matInput
+            placeholder="Firstname"
+            required
+          />
+        </mat-form-field>
+      </div>
+
+      <div class="col-6">
+        <mat-form-field class="w=200">
+          <input
+            type="text"
+            name="secondname"
+            [(ngModel)]="newWorkerModel.secondname"
+            matInput
+            placeholder="Secondname"
+            required
+          />
+        </mat-form-field>
+      </div>
+      <div class="col-6">
+        <mat-form-field class="w=200">
+          <input
+            type="text"
+            name="birthday"
+            [(ngModel)]="newWorkerModel.birthday"
+            matInput
+            placeholder="Birthday"
+            required
+          />
+        </mat-form-field>
+      </div>
+      <div class="col-6">
+        <mat-form-field class="w=200">
+          <input
+            type="text"
+            name="companyName"
+            [(ngModel)]="newWorkerModel.companyName"
+            matInput
+            placeholder="CompanyName"
+            required
+          />
+        </mat-form-field>
+      </div>
+      <div class="col-6">
+        <mat-form-field class="w=200">
+          <input
+            type="text"
+            name="position"
+            [(ngModel)]="newWorkerModel.position"
+            matInput
+            placeholder="Position"
+            required
+          />
+        </mat-form-field>
+      </div>
+      <div class="col-6">
+        <mat-form-field class="w=200">
+          <input
+            type="text"
+            name="applyDate"
+            [(ngModel)]="newWorkerModel.applyDate"
+            matInput
+            placeholder="ApplyDate"
+            required
+          />
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <div mat-dialog-actions>
+    <button
+      mat-button
+      type="button"
+      (click)="create(createForm)"
+      [disabled]="!createForm.valid"
+      color="primary"
+    >
+      Create
+    </button>
+    <button mat-button mat-dialog-close>Cancel</button>
+  </div>
+  <mat-dialog-actions>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </mat-dialog-actions>
+</form>

@@ -1,0 +1,12 @@
+.post-list-table {
+    margin-top: 20px;
+  
+    ::ng-deep {
+      .mat-row {
+        &:hover {
+          background-color: #5e53c0;
+          cursor: pointer;
+        }
+      }
+    }
+  }
