@@ -17,7 +17,7 @@ import {
     secondname: string;
   
     @Column({ type: 'date' })
-    birthday: Date;
+    birthday: string;
   
     @Column()
     companyName: string;
@@ -26,5 +26,5 @@ import {
     position: string;
   
     @CreateDateColumn({ type: 'date' })
-    applyDate!: Date;
+    applyDate!: string;
   }
